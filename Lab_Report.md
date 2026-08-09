@@ -52,37 +52,9 @@ graph TD
     I -->|Triggers| J[Retraining]
     J --> A
 ```
-*(You can use the diagram above in your final submission, or recreate it in Draw.io/Canva).*
 
-## Part B – Development Environment Setup
 
-To verify installations and take screenshots, run the following commands in your terminal:
-
-```bash
-python --version
-git --version
-code --version
-docker --version
-mlflow --version
-```
-*(Please take screenshots of the output for your submission).*
-
-## Part C – Create Your First MLOps Project
-
-The project structure has been created successfully in the `MLOps-Lab` folder. 
-To push it to GitHub, please follow these steps in your terminal:
-1. Go to GitHub and create a new empty repository named `MLOps-Lab`.
-2. Ensure you are in the `MLOps-Lab` directory.
-3. Run the following commands:
-```bash
-git add .
-git commit -m "Initial commit: Set up MLOps project structure"
-git branch -M main
-git remote add origin <YOUR_GITHUB_REPO_URL>
-git push -u origin main
-```
-
-## Part D – Exploring MLflow
+##  Exploring MLflow
 
 ### Observations from `mlflow ui`
 When running `mlflow ui` and opening the interface (usually at `http://127.0.0.1:5000`):
@@ -92,27 +64,6 @@ When running `mlflow ui` and opening the interface (usually at `http://127.0.0.1
 - **Parameters**: Key-value pairs (e.g., learning rate, batch size) used to configure the run, making it easy to compare different configurations.
 - **Metrics**: Quantitative values updated during the run (e.g., accuracy, loss) used to evaluate and compare model performance.
 
-*(Please take screenshots of the MLflow UI as required).*
-
-### Challenge Activity
-
-1. **Why is MLflow called an "experiment tracking" platform?**
-   It allows data scientists to log, organize, and compare parameters, code versions, metrics, and artifacts across hundreds of training iterations (experiments) to quickly identify the best performing model.
-
-2. **What problems does MLflow solve?**
-   It solves the lack of reproducibility, difficulty in tracking hyperparameter tuning, challenges in model packaging for deployment, and the absence of a centralized model registry.
-
-3. **Can MLflow be used with TensorFlow?**
-   Yes, MLflow has built-in autologging (`mlflow.tensorflow.autolog()`) and APIs for logging TensorFlow/Keras models seamlessly.
-
-4. **Can MLflow be used with PyTorch?**
-   Yes, MLflow supports PyTorch natively, allowing for logging PyTorch models, metrics, and integrating with PyTorch Lightning.
-
-5. **Can MLflow be used with Scikit-Learn?**
-   Yes, it has strong integration with Scikit-Learn, including native autologging capabilities (`mlflow.sklearn.autolog()`).
-
-6. **Can MLflow be deployed using Docker?**
-   Yes, MLflow models can be containerized. MLflow can automatically build a Docker image containing the model and its dependencies. Also, the tracking server itself is frequently hosted in a Docker container.
 
 7. **Which companies are using MLflow?**
    Many prominent tech companies and enterprises use MLflow, including Databricks (its creator), Microsoft, Toyota, Zillow, and numerous others adopting modern MLOps practices.
